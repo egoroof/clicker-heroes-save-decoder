@@ -7,10 +7,6 @@ const debugFilename = "clickerHeroSave.debug.json";
 console.log(`<- ${srcFilename}`);
 const data = sanitize(decode(readFileSync(srcFilename)));
 
-if (data.readPatchNumber !== "1.0e12-4443") {
-  console.log(`warn: untested game version ${data.readPatchNumber}`);
-}
-
 console.log(`-> ${debugFilename}`);
 writeFileSync(debugFilename, JSON.stringify(data, null, 2));
 
