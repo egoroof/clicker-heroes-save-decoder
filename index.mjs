@@ -11,7 +11,11 @@ console.log(`-> ${debugFilename}`);
 writeFileSync(debugFilename, JSON.stringify(data, null, 2));
 
 // modify any data
-data.autoclickers = 50;
+data.autoclickers = 100;
+data.heroSouls = 999_999_999;
+data.totalHeroSouls = 999_999_999;
+data.ancientSouls = 999_999_999;
+data.ancientSoulsTotal = 999_999_999;
 
 console.log(`-> ${srcFilename}`);
 writeFileSync(srcFilename, encode(data));
